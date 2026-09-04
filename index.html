@@ -291,6 +291,43 @@ tbody td:first-child { color: var(--text); font-weight: 500; }
 .budget-total-lbl { font-size: 13px; font-weight: 600; color: var(--text); }
 .budget-total-amt { font-size: 17px; font-weight: 700; color: var(--gold); font-variant-numeric: tabular-nums; }
 
+/* ── Responsive mobile ─────────────────────────────────────── */
+@media (max-width: 600px) {
+  .page { padding: 0 1rem 3rem; }
+
+  .topbar { padding: 0 1rem; height: 48px; }
+  .topbar-conf { display: none; }
+
+  .cover { padding: 2.5rem 0 2rem; margin-bottom: 2rem; }
+  .cover-meta { gap: 1rem; }
+
+  .kpi-strip { grid-template-columns: 1fr 1fr; }
+  .kpi-val { font-size: 20px; }
+  .kpi-lbl { font-size: 10px; }
+  .kpi { padding: 1rem 0.75rem; }
+
+  .section { margin-bottom: 2.5rem; }
+  .section-title { font-size: 18px; }
+
+  /* tables : scroll horizontal + tailles réduites */
+  table { font-size: 12px; }
+  thead th { padding: 8px 8px; font-size: 10px; }
+  tbody td { padding: 8px 8px; }
+
+  /* budget lines : montant sous le libellé sur mobile */
+  .budget-line { flex-direction: column; gap: 2px; }
+  .budget-amt { font-size: 12px; }
+  .budget-total-line { flex-direction: column; gap: 4px; }
+  .budget-total-amt { font-size: 15px; }
+
+  /* stat rows */
+  .stat-row { flex-wrap: wrap; gap: 4px; }
+  .stat-val { font-size: 13px; }
+
+  /* grand total box */
+  .section > div[style*="bg-card"] { padding: 1rem; }
+}
+
 /* footer */
 .footer {
   padding-top: 2rem;
